@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="HUMANE canon, lore, and narrative-development wiki." />
+  <meta name="theme-color" content="#8b641f" />
+  <title>HUMANE Wiki</title>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
+
+  <style>
+    :root {
+      --theme-color: #8b641f;
+      --humane-ink: #26384d;
+      --humane-gold: #8b641f;
+      --humane-paper: #fffdf8;
+      --humane-soft: #fff6e6;
+    }
+
+    html,
+    body {
+      background: var(--humane-paper);
+      color: var(--humane-ink);
+    }
+
+    body {
+      font-size: 16px;
+    }
+
+    .markdown-section {
+      max-width: 920px;
+      padding: 2rem 2.4rem 4rem;
+    }
+
+    .markdown-section h1,
+    .markdown-section h2,
+    .markdown-section h3 {
+      color: var(--humane-ink);
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .markdown-section a {
+      color: var(--humane-gold);
+      font-weight: 600;
+    }
+
+    .markdown-section blockquote {
+      border-left: 5px solid var(--humane-gold);
+      background: var(--humane-soft);
+      color: #4b3825;
+      padding: 1rem 1.2rem;
+      margin: 1.4rem 0;
+      border-radius: 0 10px 10px 0;
+    }
+
+    .markdown-section table {
+      display: table;
+      width: 100%;
+    }
+
+    .sidebar {
+      border-right: 1px solid #eadfcf;
+      background: #fffaf0;
+    }
+
+    .sidebar ul li a {
+      color: #39485c;
+    }
+
+    .sidebar ul li.active > a {
+      color: var(--humane-gold);
+      border-right: 2px solid var(--humane-gold);
+    }
+
+    .app-name-link {
+      color: var(--humane-ink) !important;
+      font-weight: 700 !important;
+    }
+
+    .search input {
+      border-radius: 999px;
+      border: 1px solid #e4d4bc;
+      background: #fffdf8;
+    }
+
+    .github-corner svg {
+      fill: var(--humane-gold);
+    }
+
+    @media (max-width: 768px) {
+      .markdown-section {
+        padding: 1.5rem 1.2rem 3rem;
+      }
+
+      .markdown-section h1 {
+        font-size: 2rem;
+      }
+
+      .markdown-section h2 {
+        font-size: 1.55rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div id="app">Loading HUMANE Wiki...</div>
+
+  <script>
+    window.$docsify = {
+      name: 'HUMANE Wiki',
+      repo: 'guidoduchi/humane-wiki',
+      homepage: 'README.md',
+      loadSidebar: true,
+      loadNavbar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      relativePath: false,
+      notFoundPage: true,
+      alias: {
+        '/.*/_sidebar.md': '/_sidebar.md',
+        '/.*/_navbar.md': '/_navbar.md'
+      },
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search HUMANE canon...',
+        noData: 'No matching canon entry found.',
+        depth: 6,
+        hideOtherSidebarContent: false
+      },
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied'
+      },
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true,
+        crossChapterText: true
+      }
+    };
+  </script>
+
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code@2/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination@2/dist/docsify-pagination.min.js"></script>
+</body>
+</html>
