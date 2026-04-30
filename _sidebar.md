@@ -23,6 +23,7 @@
   - [World Overview](docs/world/overview.md)
   - [Pritana](docs/world/pritana.md)
   - [Vahllalhag](docs/world/vahllalhag.md)
+  - [Fimbulwinter and Tin Production](docs/world/fimbulwinter-and-tin.md)
 
 - Characters
   - [Character Index](docs/characters/index.md)
