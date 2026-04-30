@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="HUMANE canon, lore, and narrative-development wiki." />
+  <meta name="description" content="HUMANE canon, lore, and narrative-development control room." />
   <meta name="theme-color" content="#8b641f" />
-  <title>HUMANE Wiki</title>
+  <title>HUMANE Control Room</title>
 
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css" />
 
@@ -13,9 +13,14 @@
     :root {
       --theme-color: #8b641f;
       --humane-ink: #26384d;
+      --humane-ink-soft: #43546a;
       --humane-gold: #8b641f;
+      --humane-gold-light: #d9ae56;
       --humane-paper: #fffdf8;
       --humane-soft: #fff6e6;
+      --humane-panel: #ffffff;
+      --humane-line: #eadfcf;
+      --humane-shadow: 0 18px 45px rgba(38, 56, 77, 0.08);
     }
 
     html,
@@ -29,7 +34,7 @@
     }
 
     .markdown-section {
-      max-width: 920px;
+      max-width: 1040px;
       padding: 2rem 2.4rem 4rem;
     }
 
@@ -37,13 +42,32 @@
     .markdown-section h2,
     .markdown-section h3 {
       color: var(--humane-ink);
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-weight: 800;
+      letter-spacing: -0.035em;
+    }
+
+    .markdown-section h1 {
+      font-size: 3rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .markdown-section h2 {
+      margin-top: 2.6rem;
+      border-bottom: 1px solid var(--humane-line);
+      padding-bottom: 0.45rem;
+    }
+
+    .markdown-section p,
+    .markdown-section li {
+      color: var(--humane-ink-soft);
+      line-height: 1.7;
     }
 
     .markdown-section a {
       color: var(--humane-gold);
-      font-weight: 600;
+      font-weight: 700;
+      text-decoration-color: rgba(139, 100, 31, 0.28);
+      text-underline-offset: 0.18em;
     }
 
     .markdown-section blockquote {
@@ -52,16 +76,29 @@
       color: #4b3825;
       padding: 1rem 1.2rem;
       margin: 1.4rem 0;
-      border-radius: 0 10px 10px 0;
+      border-radius: 0 14px 14px 0;
+    }
+
+    .markdown-section blockquote p {
+      color: #4b3825;
+      font-weight: 650;
     }
 
     .markdown-section table {
       display: table;
       width: 100%;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 0 0 1px var(--humane-line);
+    }
+
+    .markdown-section table th {
+      background: #fff6e6;
+      color: var(--humane-ink);
     }
 
     .sidebar {
-      border-right: 1px solid #eadfcf;
+      border-right: 1px solid var(--humane-line);
       background: #fffaf0;
     }
 
@@ -72,11 +109,13 @@
     .sidebar ul li.active > a {
       color: var(--humane-gold);
       border-right: 2px solid var(--humane-gold);
+      font-weight: 800;
     }
 
     .app-name-link {
       color: var(--humane-ink) !important;
-      font-weight: 700 !important;
+      font-weight: 800 !important;
+      letter-spacing: -0.02em;
     }
 
     .search input {
@@ -89,27 +128,134 @@
       fill: var(--humane-gold);
     }
 
+    .hero-panel {
+      background:
+        radial-gradient(circle at top left, rgba(217, 174, 86, 0.30), transparent 30%),
+        linear-gradient(135deg, #fff8e9 0%, #ffffff 52%, #f9fbff 100%);
+      border: 1px solid var(--humane-line);
+      border-radius: 24px;
+      box-shadow: var(--humane-shadow);
+      padding: 2rem;
+      margin: 1.2rem 0 2rem;
+    }
+
+    .hero-panel p {
+      font-size: 1.08rem;
+      max-width: 780px;
+    }
+
+    .status-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.7rem;
+      margin-top: 1.2rem;
+    }
+
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.42rem;
+      border: 1px solid rgba(139, 100, 31, 0.22);
+      background: rgba(255, 246, 230, 0.78);
+      color: #6d4d18;
+      border-radius: 999px;
+      padding: 0.44rem 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 750;
+    }
+
+    .dashboard-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+      margin: 1.4rem 0 2rem;
+    }
+
+    .control-card {
+      display: block;
+      background: var(--humane-panel);
+      border: 1px solid var(--humane-line);
+      border-radius: 18px;
+      padding: 1.15rem;
+      box-shadow: 0 10px 28px rgba(38, 56, 77, 0.06);
+      text-decoration: none !important;
+      transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+    }
+
+    .control-card:hover {
+      transform: translateY(-2px);
+      border-color: rgba(139, 100, 31, 0.36);
+      box-shadow: 0 18px 36px rgba(38, 56, 77, 0.10);
+    }
+
+    .control-card strong {
+      color: var(--humane-ink);
+      display: block;
+      font-size: 1.05rem;
+      margin-bottom: 0.3rem;
+    }
+
+    .control-card span {
+      color: var(--humane-ink-soft);
+      display: block;
+      line-height: 1.55;
+      font-weight: 500;
+    }
+
+    .signal-list {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 0.8rem;
+      margin: 1.2rem 0;
+    }
+
+    .signal {
+      border-left: 4px solid var(--humane-gold);
+      background: #fffaf0;
+      border-radius: 12px;
+      padding: 0.9rem;
+      color: var(--humane-ink-soft);
+    }
+
+    .signal strong {
+      color: var(--humane-ink);
+      display: block;
+      margin-bottom: 0.18rem;
+    }
+
+    @media (max-width: 860px) {
+      .dashboard-grid,
+      .signal-list {
+        grid-template-columns: 1fr;
+      }
+    }
+
     @media (max-width: 768px) {
       .markdown-section {
-        padding: 1.5rem 1.2rem 3rem;
+        padding: 1.35rem 1.05rem 3rem;
       }
 
       .markdown-section h1 {
-        font-size: 2rem;
+        font-size: 2.2rem;
       }
 
       .markdown-section h2 {
         font-size: 1.55rem;
       }
+
+      .hero-panel {
+        padding: 1.25rem;
+        border-radius: 18px;
+      }
     }
   </style>
 </head>
 <body>
-  <div id="app">Loading HUMANE Wiki...</div>
+  <div id="app">Loading HUMANE Control Room...</div>
 
   <script>
     window.$docsify = {
-      name: 'HUMANE Wiki',
+      name: 'HUMANE Control Room',
       repo: 'guidoduchi/humane-wiki',
       homepage: 'README.md',
       loadSidebar: true,
