@@ -1,0 +1,6 @@
+- [Home](/)
+- [Canon](docs/canon/canon.md)
+- [Narrative Development](docs/project/narrative-development.md)
+- [Workflow](docs/project/wiki-workflow.md)
+- [License](LICENSE.md)
+- [GitHub](https://github.com/guidoduchi/humane-wiki)
