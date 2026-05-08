@@ -1,7 +1,14 @@
-- [Home](README.md)
+- [Control Room](README.md)
 - [License](LICENSE.md)
 
-- Project
+- Control Room
+  - [Dashboard](docs/control-room/dashboard.md)
+  - [Open Questions](docs/control-room/open-questions.md)
+  - [Decision Log](docs/control-room/decision-log.md)
+  - [Review Gates](docs/control-room/review-gates.md)
+  - [Collaboration Protocol](docs/control-room/collaboration-protocol.md)
+
+- Narrative Engine
   - [Narrative Development Guide](docs/project/narrative-development.md)
   - [Wiki Workflow](docs/project/wiki-workflow.md)
   - [Page Template](docs/project/page-template.md)
@@ -16,6 +23,7 @@
   - [World Overview](docs/world/overview.md)
   - [Pritana](docs/world/pritana.md)
   - [Vahllalhag](docs/world/vahllalhag.md)
+  - [Fimbulwinter and Tin Production](docs/world/fimbulwinter-and-tin.md)
 
 - Characters
   - [Character Index](docs/characters/index.md)
