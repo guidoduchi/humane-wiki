@@ -36,6 +36,8 @@
   - [Systems Overview](docs/systems/overview.md)
   - [Hyper Abilities](docs/systems/hyper-abilities.md)
   - [Star Piece](docs/systems/star-piece.md)
+  - [Singularity, The Entity, and The Threshold](docs/systems/singularity-entity-threshold.md)
+  - [Singularity Pending Questions](docs/systems/singularity-pending-questions.md)
 
 - Books
   - [Book 1 Overview](docs/books/book-1/overview.md)
